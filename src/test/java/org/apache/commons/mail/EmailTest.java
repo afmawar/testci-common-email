@@ -41,6 +41,27 @@ public class EmailTest {
 		email.addCc("sadas@mail.com"); // adding a sample email to addCc
 		assertEquals(1, email.getCcAddresses().size()); // asserting that the size is 1 confriming the meail was added
 	}
+	
+	@Test
+	public void testAddHeader() throws Exception{
+	
+		email.addHeader("name", "value"); // testing add header with non null values
+		
+		assertEquals(1, email.headers.keySet().size()); // asserting that a header was added
+	        
+        try {
+            email.addHeader("", "value ");  // testing add header with an empty string for name 
+        }
+        catch (IllegalArgumentException e) {
+            assertEquals("name can not be null or empty", e.getMessage()); // testing throw exception message is equal to correct exception
+        }
+        try {
+            email.addHeader("name ", ""); // testing add header with an empty string for value 
+        }
+        catch (IllegalArgumentException e) {
+            assertEquals("value can not be null or empty", e.getMessage()); // testing throw exception message is equal to correct exception
+        }
+	}
 
 	
 }
