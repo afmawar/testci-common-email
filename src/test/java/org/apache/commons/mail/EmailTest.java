@@ -62,6 +62,11 @@ public class EmailTest {
             assertEquals("value can not be null or empty", e.getMessage()); // testing throw exception message is equal to correct exception
         }
 	}
+	@Test
+	public void testAddreplyTo() throws Exception{
+		Email e = email.addReplyTo("sada@mail.com.uk", "name"); // creating a dummy Email 'e' and calling addReplyTo method with sample data
+		assertEquals(1, e.getReplyToAddresses().size()); // asserting data was added 
+	}
 
 	
 }
