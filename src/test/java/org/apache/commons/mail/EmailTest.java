@@ -36,6 +36,11 @@ public class EmailTest {
 		}
 
 	}
+	@Test
+	public void testAddCc() throws Exception{
+		email.addCc("sadas@mail.com"); // adding a sample email to addCc
+		assertEquals(1, email.getCcAddresses().size()); // asserting that the size is 1 confriming the meail was added
+	}
 
 	
 }
