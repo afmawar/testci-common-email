@@ -67,6 +67,11 @@ public class EmailTest {
 		Email e = email.addReplyTo("sada@mail.com.uk", "name"); // creating a dummy Email 'e' and calling addReplyTo method with sample data
 		assertEquals(1, e.getReplyToAddresses().size()); // asserting data was added 
 	}
+	@Test
+	public void testBuildMimeMessage() throws Exception{
+		
+		email.buildMimeMessage();
+	}
 
 	
 }
