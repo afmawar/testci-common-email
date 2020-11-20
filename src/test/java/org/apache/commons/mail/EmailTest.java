@@ -87,6 +87,12 @@ public class EmailTest {
 		assertNotNull(email.getMailSession()); // asserting mail session from call is not null
 		
 	}
+	@Test
+	public void testGetSentDate() throws Exception{
+		assertNotNull(email.getSentDate()); // asserting date gotten from getSentDate is not = to null
+		email.sentDate = email.getSentDate(); // assigning sentDate to date from getSentDate
+		assertEquals(email.sentDate, email.getSentDate()); // asserting sentDate is = to Date from getSentDate
+	}
 
 	
 }
