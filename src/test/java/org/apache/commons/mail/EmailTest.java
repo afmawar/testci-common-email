@@ -93,6 +93,11 @@ public class EmailTest {
 		email.sentDate = email.getSentDate(); // assigning sentDate to date from getSentDate
 		assertEquals(email.sentDate, email.getSentDate()); // asserting sentDate is = to Date from getSentDate
 	}
+	
+	@Test 
+	public void testGetSocketConnectionTimeout() throws Exception{
+		assertNotNull(email.getSocketConnectionTimeout()); // asserting getSocketConnection return is not null
+	}
 
 	
 }
