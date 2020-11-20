@@ -79,6 +79,14 @@ public class EmailTest {
 		email.hostName = "test"; // setting host name with a sample
 		assertEquals("test", email.getHostName()); // asserting host name gotten from call is equal to one set
 	}
+	
+	@Test
+	public void testGetMailSession() throws Exception{
+		
+		email.setHostName("test Host"); //setting host name to sample data
+		assertNotNull(email.getMailSession()); // asserting mail session from call is not null
+		
+	}
 
 	
 }
