@@ -99,5 +99,9 @@ public class EmailTest {
 		assertNotNull(email.getSocketConnectionTimeout()); // asserting getSocketConnection return is not null
 	}
 
-	
+	@Test
+	public void testSetFrom() throws Exception{
+		email.setFrom("test@mail.com"); // setting from with sample data
+		assertEquals("test@mail.com", email.getFromAddress().toString()); // asserting data is = to sample data
+	}
 }
