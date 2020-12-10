@@ -1,5 +1,5 @@
 
-
+mvn test -B
 language: java 
 jdk:
 -openjdk11
