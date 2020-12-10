@@ -1,6 +1,8 @@
-mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
-mvn test -B
-language: java 
-jdk:
--openjdk11
-script: - mvn clean install
+--- 
+jdk: openjdk11
+language: java
+? "mvn install"
+: "-DskipTests=true -Dmaven.javadoc.skip=true -B -V"
+? "mvn test"
+: "-B"
+script: "mvn clean install"
