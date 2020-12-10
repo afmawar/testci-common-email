@@ -1,4 +1,4 @@
 language: java
-jdk: jdk11
+jdk: openjdk11
 script: mvn clean install
 
