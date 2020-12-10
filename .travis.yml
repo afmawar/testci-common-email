@@ -1,4 +1,4 @@
 language: java
-script: 
-  - cd project 
-  - mvn clean install
+jdk: oraclejdk14
+install: true
+script: ./mvnw clean install
